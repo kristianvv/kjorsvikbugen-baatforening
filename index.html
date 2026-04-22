@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kjørsvikbugen Batforening</title>
+    <style>
+        :root {
+            --bg: #dce8ef;
+            --bg-soft: #c4d8e3;
+            --surface: #f9f5ee;
+            --surface-2: #e7f1f6;
+            --text: #0f2530;
+            --muted: #49616d;
+            --line: #bfd0db;
+            --accent: #0f5a73;
+            --accent-2: #a86b2a;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Avenir Next", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background:
+                radial-gradient(circle at top right, var(--bg-soft) 0%, var(--bg) 42%),
+                var(--bg);
+            min-height: 100vh;
+        }
+
+        .wrap {
+            width: min(880px, 92vw);
+            margin: 0 auto;
+        }
+
+        header {
+            padding: 3rem 0 1.25rem;
+            border-bottom: 1px solid var(--line);
+            background: linear-gradient(115deg, #f9f4ea 0%, #edf5f9 100%);
+        }
+
+        .site-title {
+            margin: 0;
+            font-size: clamp(1.3rem, 1.1rem + 1vw, 2rem);
+            letter-spacing: 0.04em;
+            font-weight: 700;
+        }
+
+        .site-subtitle {
+            margin: 0.35rem 0 0;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        nav {
+            border-bottom: 1px solid var(--line);
+            background: linear-gradient(90deg, #eff6fa 0%, #e4eef3 100%);
+            backdrop-filter: blur(6px);
+        }
+
+        nav .wrap {
+            display: flex;
+            gap: 1.25rem;
+            padding: 0.75rem 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--muted);
+            font-size: 0.92rem;
+            transition: color 140ms ease;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        main {
+            padding: 3rem 0;
+        }
+
+        .intro h1 {
+            margin: 0;
+            font-size: clamp(1.5rem, 1.25rem + 1.3vw, 2.3rem);
+            line-height: 1.2;
+        }
+
+        .intro p {
+            margin-top: 1rem;
+            max-width: 66ch;
+            color: var(--muted);
+        }
+
+        .dock-visual {
+            margin: 1.6rem 0 0;
+            border-radius: 14px;
+            overflow: hidden;
+            border: 1px solid #9fbdcd;
+            background: #bfd4df;
+            box-shadow: 0 22px 34px -30px rgba(15, 45, 59, 0.65);
+        }
+
+        .dock-visual img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .dock-caption {
+            margin: 0;
+            padding: 0.55rem 0.85rem;
+            font-size: 0.86rem;
+            color: #2f4a58;
+            background: #e4eff5;
+            border-top: 1px solid #9fbdcd;
+        }
+
+        .services {
+            margin-top: 2.5rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+        }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 1.05rem;
+            box-shadow: 0 10px 24px -24px rgba(14, 38, 48, 0.45);
+        }
+
+        .card:nth-child(2) {
+            background: var(--surface-2);
+            border-color: #aecad8;
+        }
+
+        .card:nth-child(3) {
+            background: #f6ede1;
+            border-color: #d7bc9d;
+        }
+
+        .card h2 {
+            margin: 0 0 0.45rem;
+            font-size: 1rem;
+            color: var(--accent);
+        }
+
+        .card:nth-child(3) h2 {
+            color: var(--accent-2);
+        }
+
+        .card p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        footer {
+            margin-top: 2rem;
+            border-top: 1px solid var(--line);
+            padding: 1rem 0 1.2rem;
+            color: var(--muted);
+            font-size: 0.9rem;
+            background: linear-gradient(120deg, #edf4f8 0%, #dce9f0 100%);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="wrap">
+            <p class="site-title">KJØRSVIKBUGEN BÅTFORENING</p>
+            <p class="site-subtitle">Etablert 2000 | Havn i Aure Kommune</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="wrap">
+            <a href="index.html">Hjem</a>
+            <a href="kontakt.html">Kontakt</a>
+        </div>
+    </nav>
+
+    <main class="wrap">
+        <section class="intro">
+            <h1>Velkommen</h1>
+            <p>Velkommen hos oss i Kjørsvikbugen</p>
+            <figure class="dock-visual">
+                <img src="images/dock.jpg" alt="Bilde av brygge i Kjørsvikbugen">
+                <figcaption class="dock-caption">Kjørsvikbugen brygge.</figcaption>
+            </figure>
+        </section>
+
+        <section class="services" aria-label="Tjenester">
+            <article class="card">
+                <h2>Batplass</h2>
+                <p>Båtplasser i en trygg bukt</p>
+            </article>
+            <article class="card">
+                <h2>Fasiliteter</h2>
+                <p>Tilgang til strøm og ferskvann.</p>
+            </article>
+            <article class="card">
+                <h2>Aktiviteter</h2>
+                <p>Lorem Ipsum</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <div class="wrap">
+            <p>&copy; 2026 Kjørsvikbugen Båtforening. Alle rettigheter reservert.</p>
+            <p>Hemnevegen 712, 6699 Kjørsvikbugen | Telefon: 92 23 76 43 | Organisasjonsnummer: 998882710</p>
+        </div>
+    </footer>
+</body>
+</html>

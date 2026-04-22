@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt oss | Kjørsvikbugen Batforening</title>
+    <style>
+        :root {
+            --bg: #dce8ef;
+            --bg-soft: #c4d8e3;
+            --surface: #f9f5ee;
+            --surface-2: #e7f1f6;
+            --text: #0f2530;
+            --muted: #49616d;
+            --line: #bfd0db;
+            --accent: #0f5a73;
+            --accent-2: #a86b2a;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Avenir Next", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background:
+                radial-gradient(circle at top right, var(--bg-soft) 0%, var(--bg) 42%),
+                var(--bg);
+            min-height: 100vh;
+        }
+
+        .wrap {
+            width: min(880px, 92vw);
+            margin: 0 auto;
+        }
+
+        header {
+            padding: 3rem 0 1.25rem;
+            border-bottom: 1px solid var(--line);
+            background: linear-gradient(115deg, #f9f4ea 0%, #edf5f9 100%);
+        }
+
+        .site-title {
+            margin: 0;
+            font-size: clamp(1.3rem, 1.1rem + 1vw, 2rem);
+            letter-spacing: 0.04em;
+            font-weight: 700;
+        }
+
+        .site-subtitle {
+            margin: 0.35rem 0 0;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        nav {
+            border-bottom: 1px solid var(--line);
+            background: linear-gradient(90deg, #eff6fa 0%, #e4eef3 100%);
+            backdrop-filter: blur(6px);
+        }
+
+        nav .wrap {
+            display: flex;
+            gap: 1.25rem;
+            padding: 0.75rem 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--muted);
+            font-size: 0.92rem;
+            transition: color 140ms ease;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        main {
+            padding: 3rem 0;
+        }
+
+        h1 {
+            margin: 0 0 0.75rem;
+            font-size: clamp(1.4rem, 1.2rem + 1vw, 2.1rem);
+        }
+
+        .lead {
+            margin: 0;
+            color: var(--muted);
+            max-width: 66ch;
+        }
+
+        .contact-grid {
+            margin-top: 1.8rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .panel {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 1.05rem;
+            box-shadow: 0 10px 24px -24px rgba(14, 38, 48, 0.45);
+        }
+
+        .panel + .panel {
+            background: var(--surface-2);
+            border-color: #aecad8;
+        }
+
+        .panel h2 {
+            margin-top: 0;
+            margin-bottom: 0.75rem;
+            font-size: 1rem;
+            color: var(--accent);
+        }
+
+        .panel + .panel h2 {
+            color: var(--accent-2);
+        }
+
+        .panel p,
+        .panel li {
+            margin: 0.4rem 0;
+        }
+
+        ul {
+            padding-left: 1.1rem;
+            margin: 0.5rem 0 0;
+        }
+
+        small {
+            color: var(--muted);
+            display: block;
+            margin-top: 0.85rem;
+        }
+
+        footer {
+            margin-top: 2rem;
+            border-top: 1px solid var(--line);
+            padding: 1rem 0 1.2rem;
+            color: var(--muted);
+            font-size: 0.9rem;
+            background: linear-gradient(120deg, #edf4f8 0%, #dce9f0 100%);
+        }
+
+        @media (max-width: 720px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="wrap">
+            <p class="site-title">KJØRSVIKBUGEN BÅTFORENING</p>
+            <p class="site-subtitle">Kontakt oss</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="wrap">
+            <a href="index.html">Hjem</a>
+            <a href="kontakt.html">Kontakt</a>
+        </div>
+    </nav>
+
+    <main class="wrap">
+        <h1>Ta kontakt med styret</h1>
+        <p class="lead">Kontakt oss direkte pa e-post eller telefon. Vi svarer sa raskt vi kan.</p>
+
+        <div class="contact-grid">
+            <section class="panel" aria-label="Kontaktinformasjon">
+                <h2>Informasjon</h2>
+                <p><strong>Leder:</strong> Ola Nordmann</p>
+                <p><strong>Havnemester:</strong> Kari Nordmann</p>
+                <p><strong>Adresse:</strong> Kjørsvikbugen Marina, 6690 Aure</p>
+                <p><strong>E-post:</strong> post@kjørsvikbugen-baat.no</p>
+                <p><strong>Telefon:</strong> +47 99 88 77 66</p>
+                <small>For sporsmal om vaktlister eller dugnad, oppgi medlemsnummer i meldingen.</small>
+            </section>
+
+            <section class="panel" aria-label="Praktisk kontakt">
+                <h2>Praktisk</h2>
+                <p><strong>Responstid:</strong> Vanligvis innen 1-2 virkedager.</p>
+                <p><strong>Best for båtplass:</strong> Send e-post med båtdata og onsket sesong.</p>
+                <p><strong>Oppmote:</strong> Etter avtale med havnemester.</p>
+                <ul>
+                    <li>Oppgi medlemsnummer ved henvendelser om dugnad.</li>
+                    <li>Merk e-post med tydelig emnefelt.</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="wrap">
+            <p>&copy; 2026 Kjørsvikbugen Batforening. Alle rettigheter reservert.</p>
+        </div>
+    </footer>
+</body>
+</html>
