@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dokumenter | Kjørsvikbugen Båtforening</title>
+    <style>
+        :root {
+            --bg: #dce8ef;
+            --bg-soft: #c4d8e3;
+            --surface: #f9f5ee;
+            --surface-2: #e7f1f6;
+            --text: #0f2530;
+            --muted: #49616d;
+            --line: #bfd0db;
+            --accent: #0f5a73;
+            --accent-2: #a86b2a;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Avenir Next", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background:
+                radial-gradient(circle at top right, var(--bg-soft) 0%, var(--bg) 42%),
+                var(--bg);
+            min-height: 100vh;
+        }
+
+        .wrap {
+            width: min(880px, 92vw);
+            margin: 0 auto;
+        }
+
+        header {
+            padding: 3rem 0 1.25rem;
+            border-bottom: 1px solid var(--line);
+            background: linear-gradient(115deg, #f9f4ea 0%, #edf5f9 100%);
+        }
+
+        .site-title {
+            margin: 0;
+            font-size: clamp(1.3rem, 1.1rem + 1vw, 2rem);
+            letter-spacing: 0.04em;
+            font-weight: 700;
+        }
+
+        .site-subtitle {
+            margin: 0.35rem 0 0;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        nav {
+            border-bottom: 1px solid var(--line);
+            background: linear-gradient(90deg, #eff6fa 0%, #e4eef3 100%);
+            backdrop-filter: blur(6px);
+        }
+
+        nav .wrap {
+            display: flex;
+            gap: 1.25rem;
+            flex-wrap: wrap;
+            padding: 0.75rem 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--muted);
+            font-size: 0.92rem;
+            transition: color 140ms ease;
+        }
+
+        nav a:hover,
+        nav a[aria-current="page"] {
+            color: var(--accent);
+        }
+
+        nav a[aria-current="page"] {
+            font-weight: 700;
+        }
+
+        main {
+            padding: 3rem 0;
+        }
+
+        h1 {
+            margin: 0 0 0.75rem;
+            font-size: clamp(1.4rem, 1.2rem + 1vw, 2.1rem);
+        }
+
+        .lead {
+            margin: 0;
+            color: var(--muted);
+            max-width: 66ch;
+        }
+
+        .document-grid {
+            margin-top: 1.8rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1rem;
+        }
+
+        .document-card {
+            display: flex;
+            flex-direction: column;
+            min-height: 230px;
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            padding: 1rem;
+            box-shadow: 0 10px 24px -24px rgba(14, 38, 48, 0.45);
+        }
+
+        .document-card:nth-child(even) {
+            background: var(--surface-2);
+            border-color: #aecad8;
+        }
+
+        .document-card h2 {
+            margin: 0 0 0.45rem;
+            font-size: 1.05rem;
+            color: var(--accent);
+        }
+
+        .document-card p {
+            margin: 0;
+            color: var(--muted);
+        }
+
+        .doc-meta {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 0.85rem;
+        }
+
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            padding: 0.18rem 0.55rem;
+            background: rgba(255, 255, 255, 0.42);
+            color: var(--muted);
+            font-size: 0.82rem;
+            font-weight: 700;
+        }
+
+        .download-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 2.5rem;
+            margin-top: auto;
+            border: 1px solid var(--accent);
+            border-radius: 8px;
+            padding: 0.55rem 0.8rem;
+            color: #ffffff;
+            background: var(--accent);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .download-link:hover {
+            background: #0b4a5f;
+        }
+
+        .note {
+            margin-top: 1.4rem;
+            padding: 0.9rem 1rem;
+            border: 1px solid #aecad8;
+            border-left: 5px solid var(--accent);
+            border-radius: 8px;
+            background: var(--surface-2);
+            color: var(--muted);
+        }
+
+        footer {
+            margin-top: 2rem;
+            border-top: 1px solid var(--line);
+            padding: 1rem 0 1.2rem;
+            color: var(--muted);
+            font-size: 0.9rem;
+            background: linear-gradient(120deg, #edf4f8 0%, #dce9f0 100%);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="wrap">
+            <p class="site-title">KJØRSVIKBUGEN BÅTFORENING</p>
+            <p class="site-subtitle">Dokumenter for nedlasting</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="wrap">
+            <a href="index.html">Hjem</a>
+            <a href="priser.html">Priser</a>
+            <a href="dokumenter.html" aria-current="page">Dokumenter</a>
+            <a href="kontakt.html">Kontakt</a>
+        </div>
+    </nav>
+
+    <main class="wrap">
+        <h1>Dokumenter for nedlasting</h1>
+        <p class="lead">Her finner du foreningens gjeldende regler, vedtekter, økonomireglement og innmeldingsskjema.</p>
+
+        <section class="document-grid" aria-label="Nedlastbare dokumenter">
+            <article class="document-card">
+                <h2>Vedtekter 2025</h2>
+                <p>Foreningens formål, medlemskap, årsmøte, styrearbeid og øvrige vedtekter.</p>
+                <a class="download-link" href="dokumenter/Vedtekter  2025.pdf" download>Last ned</a>
+            </article>
+
+            <article class="document-card">
+                <h2>Havnereglement 2025</h2>
+                <p>Regler for tildeling og bruk av båtplass, fortøyning, dugnad og ansvar i havna.</p>
+                <a class="download-link" href="dokumenter/Havnereglement 2025.pdf" download>Last ned</a>
+            </article>
+
+            <article class="document-card">
+                <h2>Økonomireglement 2025</h2>
+                <p>Gjeldende innskudd, kontingent, årsleie, strømpris og priser for gjester.</p>
+                <a class="download-link" href="dokumenter/Økonomireglement 2025.pdf" download>Last ned</a>
+            </article>
+
+            <article class="document-card">
+                <h2>Innmeldingsskjema</h2>
+                <p>Skjema for nye medlemmer som skal fylles ut, signeres og returneres til foreningen.</p>
+                <a class="download-link" href="dokumenter/Innmeldingsskjema.pdf" download>Last ned</a>
+            </article>
+
+            <article class="document-card">
+                <h2>Innmeldingsskjema regneark</h2>
+                <p>Regnearkversjon av innmeldingsskjemaet for elektronisk utfylling.</p>
+                <a class="download-link" href="dokumenter/Innmeldingsskjema Kjørsvikbugen Båtforening.ods" download>Last ned</a>
+            </article>
+        </section>
+
+        <p class="note">Dokumentene er lagt ut slik at medlemmer, søkere og gjester enkelt kan hente riktig skjema eller regelverk.</p>
+    </main>
+
+    <footer>
+        <div class="wrap">
+            <p>&copy; 2026 Kjørsvikbugen Båtforening. Alle rettigheter reservert.</p>
+            <p>Hemnevegen 712, 6699 Kjørsvikbugen | Telefon: 92 23 76 43 | Organisasjonsnummer: 998882710</p>
+        </div>
+    </footer>
+</body>
+</html>

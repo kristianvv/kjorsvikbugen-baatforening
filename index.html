@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kjørsvikbugen Batforening</title>
+    <title>Kjørsvikbugen Båtforening</title>
     <style>
         :root {
             --bg: #dce8ef;
@@ -65,6 +65,7 @@
         nav .wrap {
             display: flex;
             gap: 1.25rem;
+            flex-wrap: wrap;
             padding: 0.75rem 0;
         }
 
@@ -77,6 +78,11 @@
 
         nav a:hover {
             color: var(--accent);
+        }
+
+        nav a[aria-current="page"] {
+            color: var(--accent);
+            font-weight: 700;
         }
 
         main {
@@ -92,6 +98,28 @@
         .intro p {
             margin-top: 1rem;
             max-width: 66ch;
+            color: var(--muted);
+        }
+
+        .guest-highlight {
+            margin-top: 1.35rem;
+            padding: 0.95rem 1rem;
+            border: 1px solid #aecad8;
+            border-left: 5px solid var(--accent);
+            border-radius: 8px;
+            background: var(--surface-2);
+            box-shadow: 0 10px 24px -24px rgba(14, 38, 48, 0.45);
+        }
+
+        .guest-highlight strong {
+            display: block;
+            color: var(--accent);
+            font-size: 1.08rem;
+        }
+
+        .guest-highlight span {
+            display: block;
+            margin-top: 0.2rem;
             color: var(--muted);
         }
 
@@ -180,7 +208,9 @@
 
     <nav>
         <div class="wrap">
-            <a href="index.html">Hjem</a>
+            <a href="index.html" aria-current="page">Hjem</a>
+            <a href="priser.html">Priser</a>
+            <a href="dokumenter.html">Dokumenter</a>
             <a href="kontakt.html">Kontakt</a>
         </div>
     </nav>
@@ -189,6 +219,10 @@
         <section class="intro">
             <h1>Velkommen</h1>
             <p>Velkommen hos oss i Kjørsvikbugen</p>
+            <p class="guest-highlight">
+                <strong>Gjesteparkering: 100 kr</strong>
+                <span>Pris for gjester er 100 kr per døgn. Se prissiden for øvrige satser.</span>
+            </p>
             <figure class="dock-visual">
                 <img src="images/dock.jpg" alt="Bilde av brygge i Kjørsvikbugen">
                 <figcaption class="dock-caption">Båthavnen i Kjørsvikbugen</figcaption>
@@ -205,8 +239,8 @@
                 <p>Tilgang til strøm og ferskvann.</p>
             </article>
             <article class="card">
-                <h2>Aktiviteter</h2>
-                <p>Lorem Ipsum</p>
+                <h2>Butikk og restaurant</h2>
+                <p>Havnen ligger nær butikk og restaurant.</p>
             </article>
         </section>
     </main>

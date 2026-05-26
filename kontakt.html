@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontakt oss | Kjørsvikbugen Batforening</title>
+    <title>Kontakt oss | Kjørsvikbugen Båtforening</title>
     <style>
         :root {
             --bg: #dce8ef;
@@ -30,6 +30,8 @@
                 radial-gradient(circle at top right, var(--bg-soft) 0%, var(--bg) 42%),
                 var(--bg);
             min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
 
         .wrap {
@@ -65,6 +67,7 @@
         nav .wrap {
             display: flex;
             gap: 1.25rem;
+            flex-wrap: wrap;
             padding: 0.75rem 0;
         }
 
@@ -79,8 +82,14 @@
             color: var(--accent);
         }
 
+        nav a[aria-current="page"] {
+            color: var(--accent);
+            font-weight: 700;
+        }
+
         main {
             padding: 3rem 0;
+            flex: 1;
         }
 
         h1 {
@@ -97,16 +106,16 @@
         .contact-grid {
             margin-top: 1.8rem;
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
             gap: 1rem;
         }
 
         .panel {
             background: var(--surface);
             border: 1px solid var(--line);
-            border-radius: 12px;
-            padding: 1.05rem;
-            box-shadow: 0 10px 24px -24px rgba(14, 38, 48, 0.45);
+            border-radius: 8px;
+            padding: 1rem 1.1rem;
+            box-shadow: 0 10px 24px -24px rgba(4, 8, 10, 0.45);
         }
 
         .panel + .panel {
@@ -122,7 +131,7 @@
         }
 
         .panel + .panel h2 {
-            color: var(--accent-2);
+            color: var(--accent);
         }
 
         .panel p,
@@ -150,11 +159,6 @@
             background: linear-gradient(120deg, #edf4f8 0%, #dce9f0 100%);
         }
 
-        @media (max-width: 720px) {
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-        }
     </style>
 </head>
 <body>
@@ -168,41 +172,38 @@
     <nav>
         <div class="wrap">
             <a href="index.html">Hjem</a>
-            <a href="kontakt.html">Kontakt</a>
+            <a href="priser.html">Priser</a>
+            <a href="dokumenter.html">Dokumenter</a>
+            <a href="kontakt.html" aria-current="page">Kontakt</a>
         </div>
     </nav>
 
     <main class="wrap">
         <h1>Ta kontakt med styret</h1>
-        <p class="lead">Kontakt oss direkte pa e-post eller telefon. Vi svarer sa raskt vi kan.</p>
+        <p class="lead">Kontakt oss direkte på e-post eller telefon. Vi svarer så raskt vi kan.</p>
 
         <div class="contact-grid">
             <section class="panel" aria-label="Kontaktinformasjon">
                 <h2>Informasjon</h2>
-                <p><strong>Leder:</strong> Ola Nordmann</p>
-                <p><strong>Havnemester:</strong> Kari Nordmann</p>
-                <p><strong>Adresse:</strong> Kjørsvikbugen Marina, 6690 Aure</p>
-                <p><strong>E-post:</strong> post@kjørsvikbugen-baat.no</p>
-                <p><strong>Telefon:</strong> +47 99 88 77 66</p>
-                <small>For sporsmal om vaktlister eller dugnad, oppgi medlemsnummer i meldingen.</small>
+                <p><strong>Kontaktpersoner:</strong></p> 
+                <p>Børge Tingstad, Telefon: 92237643</p> 
+                <p>Odd Arne Kjørsvik, Telefon: 41411393</p>
+                <p><strong>Adresse:</strong> Hemnevegen 712, 6699 Kjørsvikbugen</p>
+                <p><strong>E-post:</strong> post@kjorsvikbugenbaatforening.no</p>
             </section>
 
             <section class="panel" aria-label="Praktisk kontakt">
                 <h2>Praktisk</h2>
-                <p><strong>Responstid:</strong> Vanligvis innen 1-2 virkedager.</p>
-                <p><strong>Best for båtplass:</strong> Send e-post med båtdata og onsket sesong.</p>
-                <p><strong>Oppmote:</strong> Etter avtale med havnemester.</p>
-                <ul>
-                    <li>Oppgi medlemsnummer ved henvendelser om dugnad.</li>
-                    <li>Merk e-post med tydelig emnefelt.</li>
-                </ul>
+                <p><strong>Medlemskap:</strong> Bruk innmeldingsskjemaet. Medlemskapet gjelder fra betalt medlemskontingent er registrert.</p>
+                <p><strong>Båtplass:</strong> Søknad om båtplass skal sendes på fastlagt skjema. Tildeling krever gyldig medlemskap, innbetalt innskudd og at forpliktelser til foreningen er oppfylt.</p>
             </section>
         </div>
     </main>
 
     <footer>
         <div class="wrap">
-            <p>&copy; 2026 Kjørsvikbugen Batforening. Alle rettigheter reservert.</p>
+            <p>&copy; 2026 Kjørsvikbugen Båtforening. Alle rettigheter reservert.</p>
+            <p>Hemnevegen 712, 6699 Kjørsvikbugen | Telefon: 92 23 76 43 | Organisasjonsnummer: 998882710</p>
         </div>
     </footer>
 </body>
